@@ -7,7 +7,7 @@ jobs:
       - run: echo "テストの実行"
       - run: |
              pwd
-             tree /home/
+             tree /
              ls -altr
              cd ${{ github.workspace }}
              echo "カレントディレクトリ"
