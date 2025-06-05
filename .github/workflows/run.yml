@@ -10,6 +10,6 @@ jobs:
              echo "カレントディレクトリ"
              ls -altr
              echo "ひとつ上"
-             ls -altr../
+             ls -altr ../
              chmod +x common_divisor_test.sh
              ./common_divisor_test.sh
