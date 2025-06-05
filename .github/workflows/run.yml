@@ -6,6 +6,8 @@ jobs:
     steps:
       - run: echo "テストの実行"
       - run: |
+             pwd
+             ls -altr
              cd ${{ github.workspace }}
              echo "カレントディレクトリ"
              ls -altr
