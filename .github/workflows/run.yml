@@ -6,11 +6,10 @@ jobs:
     steps:
 
 　　　 - name: チェックアウト
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
 
       - name: テストの実行
-      - run: echo "テストの実行"
-      - run: |
+        run: |
              pwd
              tree /
              ls -altr
