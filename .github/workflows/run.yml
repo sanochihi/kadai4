@@ -4,6 +4,11 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
+
+　　　 - name: チェックアウト
+      - uses: actions/checkout@v3
+
+      - name: テストの実行
       - run: echo "テストの実行"
       - run: |
              pwd
