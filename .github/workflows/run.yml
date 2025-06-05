@@ -5,4 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "テストの実行"
-      - run: ./common_divisor_test.sh
+      - run: |
+             cd ${{ github.workspace }}
+             chmod +x common_divisor_test.sh
+             ./common_divisor_test.sh
