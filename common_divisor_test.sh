@@ -3,6 +3,8 @@
 SCRIPT="./common_divisor.sh"
 CSV="test_case.csv"
 
+error_flg=false
+
 while IFS=, read -r case_num summary raw_args expected success_msg fail_msg; do
   # 空行・コメントスキップ
   [[ -z "$case_num" || "$case_num" =~ ^# ]] && continue
@@ -29,6 +31,7 @@ while IFS=, read -r case_num summary raw_args expected success_msg fail_msg; do
   # 結果がNGだった場合は囲み線を出して目立たせる
   if [[ $result == "NG" ]]; then
     echo "========================================"
+    error_flg=true
   fi
   
   echo "$result - ケース$case_num：$summary"
@@ -42,4 +45,10 @@ while IFS=, read -r case_num summary raw_args expected success_msg fail_msg; do
 
 done < "$CSV"
 
+if [[ $error_flg == "true" ]];
+then
+    exit 1
+else
+    exit 0
+fi
 
